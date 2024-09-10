@@ -2,12 +2,12 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" href="https://avatars.githubusercontent.com/u/116049447?v=4" type="image/x-icon">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
   font-family: monospace;
   /*font-size: 13px;*/
 }
+#name { font-size: 14px; }
 img { max-width: 100%; width: 280px;}
 a { color: blue; }
 h1 { margin: auto; }
@@ -25,7 +25,7 @@ details { max-width: 100%; width: 200px; cursor: pointer; padding: 5px; border: 
   create: 9/5/2024
 -->
 
-<span style="font-size: 20px;">ducks web site</span>
+<span style="font-size: 20px;">ducks web site <span id="name"></span></span>
 
 <p>Estas en el templo de ducks, la mayoria de cosas estara mal escrito</p>
 
@@ -50,11 +50,34 @@ details { max-width: 100%; width: 200px; cursor: pointer; padding: 5px; border: 
 </details>
 <br/>
 
+<input type="text" id="input" placeholder="ingresa apodo o nombre">
+<button type="submit" onclick="add()">goo!!</button>
+
+<br/>
+
 <b>Gracias a mi don de diseñador, por este diseño🥵.</b>
 
 <br/><br/>
 
-<!--<a href="https://www.instagram.com/fqbrii.4/" target="_blank"><i class="fa fa-instagram" style="font-size:36px; color: black;"></i></a>-->
-<!--<a href="https://x.com/ducks640755" target="_blank"><i class="fa fa-twitter-square" style="font-size:36px; color: black;"></i></a>-->
+<script>
+function add() {
+  let name = document.getElementById('name');
+  let input = document.getElementById('input').value;
+
+  localStorage.setItem('inp', input)
+  name.innerHTML = `<i>Hola (${input})</i>`
+}
+
+window.onload = function() {
+  let name = document.getElementById('name');
+  let get_data = localStorage.getItem('inp')
+
+  if (get_data) {
+    console.log(get_data)
+    name.innerHTML = `<i>Hola (${get_data})</i>`
+  } 
+}
+
+</script>
 </body>
 </html>
