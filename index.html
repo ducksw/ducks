@@ -25,7 +25,7 @@ details { max-width: 100%; width: 200px; cursor: pointer; padding: 5px; border: 
   create: 9/5/2024
 -->
 
-<span style="font-size: 20px;">ducks web site <span id="name"></span></span>
+<span style="font-size: 20px;">ducks web site</span>
 
 <p>Estas en el templo de ducks, la mayoria de cosas estara mal escrito</p>
 
@@ -48,36 +48,10 @@ details { max-width: 100%; width: 200px; cursor: pointer; padding: 5px; border: 
   <a href="https://ducksw.github.io/jorgeVerso/">JorgeVerso</a>
 </div>
 </details>
-<br/>
+<br/><br/>
 
-<input type="text" id="input" placeholder="ingresa apodo o nombre">
-<button type="submit" onclick="add()">goo!!</button>
-
-<br/><br/><br/>
 
 <b>Gracias a mi don de diseñador, por este diseño🥵.</b>
 
-<br/><br/>
-
-<script>
-function add() {
-  let name = document.getElementById('name');
-  let input = document.getElementById('input').value;
-
-  localStorage.setItem('inp', input)
-  name.innerHTML = `<i>Hola (${input})</i>`
-}
-
-window.onload = function() {
-  let name = document.getElementById('name');
-  let get_data = localStorage.getItem('inp')
-
-  if (get_data) {
-    console.log(get_data)
-    name.innerHTML = `<i>Hola (${get_data})</i>`
-  } 
-}
-
-</script>
 </body>
 </html>
