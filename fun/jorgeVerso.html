@@ -163,7 +163,7 @@ hr {
 <h1>
 El Jorgeverso es real
 </h1>
-<button id="gen">Generar_Key</button>
+<button id="gen">Generar_toKen</button>
 <br/>
 
 <input type="text" id="input">
@@ -228,7 +228,7 @@ function generator() {
     if (cont >= 1) {
       clearInterval(limit)
     }
-  }, 2500)
+  }, 1000)
 
   document.getElementById('result').innerHTML = "Pending..."
 }
@@ -330,7 +330,7 @@ function call() {
         pic.style.backgroundImage = `url(${img.src})`
         pic.style.boxShadow = "0px 0px 20px brown"
 
-        document.getElementById('result').innerHTML = "Eres"
+        document.getElementById('result').innerHTML = " " // Aqui iba el Eres
         document.getElementById('result2').innerHTML = img.name
         document.getElementById('result2').style.border = "1px solid brown"
 
