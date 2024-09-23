@@ -1,8 +1,5 @@
 body { 
   font-family: monospace;
-  text-align: center;
-  background-color: #111111;
-  color: white;
 }
 
 h1 {
@@ -35,6 +32,11 @@ a:hover {
 /* **** SCROLLL **** */
 ::-webkit-scrollbar {
   width: 8px; 
+}
+
+img {
+  max-width: 100%;
+  width: 230px;
 }
 
 ::-webkit-scrollbar-track {
