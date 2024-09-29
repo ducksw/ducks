@@ -29,6 +29,10 @@ a:hover {
   gap: 50px;
 }
 
+.title {
+  font-size: 10px;
+}
+
 /* **** SCROLLL **** */
 ::-webkit-scrollbar {
   width: 8px; 
@@ -37,6 +41,12 @@ a:hover {
 img {
   max-width: 100%;
   width: 230px;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 10px;
+  }
 }
 
 ::-webkit-scrollbar-track {
