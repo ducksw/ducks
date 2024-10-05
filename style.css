@@ -15,12 +15,7 @@ pre {
 }
 
 a {
-  color: brown;
-}
-
-a:hover {
-  background-color: brown;
-  color: black;
+  color: blue;
 }
 
 .link {
