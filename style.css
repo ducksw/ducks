@@ -18,6 +18,11 @@ a {
   color: blue;
 }
 
+a:hover {
+  background-color: brown;
+  color: black;
+}
+
 .link {
   display: flex;
   justify-content: center;
@@ -28,40 +33,11 @@ a {
   font-size: 10px;
 }
 
-/* **** SCROLLL **** */
-::-webkit-scrollbar {
-  width: 8px; 
+.ig {
+  font-size: 30px;
 }
 
 img {
   max-width: 100%;
   width: 230px;
 }
-
-main {
-}
-
-@media only screen and (max-width: 768px) {
-  .title {
-    font-size: 10px;
-  }
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #8F8F8F;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-}
-
