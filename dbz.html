@@ -2,16 +2,68 @@
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dbz</title>
+<style>
+body {
+  font-family: monospace;
+}
+h1 {
+  text-align: center;
+}
+#res {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  max-width: 100%;
+  width: 300px;
+  border: 1px solid black;
+  padding: 10px;
+}
+.cont {
+  display: flex;
+  flex-direction: column;
+}
+img {
+  top: -20px;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  max-height: 400px;
+  margin: 0px;
+}
+.aea {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+input {
+  display: flex;
+}
+
+
+</style>
 </head>
 <body>
-<h1>PERSONAJES DE DRAGON BALL SUPER</h1>
+<h1>DRAGON BALL SUPER CHARACTERS</h1>
+
+<div class="aea">
+<!-- <input type="text" id="input">
+<button onclick="aea()">go</button> -->
+</div>
   
 <div id="res"></div>
 <script>
 async function aea() {
   let res = document.getElementById('res')
+  let input = document.getElementById('input')
   const URL = "https://dragonball-api.com/api/characters"
-  let arr = []
   let currentPage = 1
   let totalpage = 1
 
@@ -27,13 +79,24 @@ async function aea() {
         const name = xd.name
         const image = xd.image
         const ki = xd.ki
+        const race = xd.race
+        const affiliation = xd.affiliation
+
+        if (input == name) {
+          console.log("El nombre buscado es: " + name)
+        }
 
         res.innerHTML += `
-          <div>
-            <h3>${name}</h3>
-            <img src="${image}" alt="${name}" style="width: 100px; height: 100px;">
-            <br/>
-            <span>KI -> ${ki}</span>
+          <div class="box">
+            <div class="cont">
+              <h2>${name}</h2>
+              <img src="${image}" alt="${name}">
+              <br/>
+              <span>KI -> ${ki}</span>
+              <span>RAZA -> ${race}</span>
+              <br/>
+              <b>${affiliation}</b>
+            </div>
           </div>
         `;
       })
@@ -45,18 +108,12 @@ async function aea() {
     currentPage++;
   }
 
+  console.log("ga")
 }
+
+var res = document.getElementById('res')
 
 aea()
-
-/*
-async function view() {
-  let ver = await aea()
-  console.log(ver)
-}
-
-view()
-*/
 </script>
 </body>
 </html>
