@@ -46,29 +46,42 @@ img {
 input {
   display: flex;
 }
+.info {
+  max-width: 100%;
+  width: 950px;
+  margin: auto;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.info a:hover {
+  background-color: black;
+  color: white;
+}
 
 
 </style>
 </head>
 <body>
-<h1>DRAGON BALL SUPER CHARACTERS</h1>
+<h1>***** DRAGON BALL SUPER CHARACTERS *****</h1>
 
-<div class="aea">
-<!-- <input type="text" id="input">
-<button onclick="aea()">go</button> -->
+<div class="info">
+Datos extraídos de <a href="https://web.dragonball-api.com/">https://web.dragonball-api.com/</a>
 </div>
-  
+
 <div id="res"></div>
 <script>
 async function aea() {
+  const URL = "https://dragonball-api.com/api/characters"
+  const LIMIT = 58 // el maximo 58
+
   let res = document.getElementById('res')
   let input = document.getElementById('input')
-  const URL = "https://dragonball-api.com/api/characters"
   let currentPage = 1
   let totalpage = 1
 
   while (currentPage <= totalpage) {
-    const response = await fetch(`${URL}?page=${currentPage}&limit=78`)
+    const response = await fetch(`${URL}?page=${currentPage}&limit=${LIMIT}`)
     const data = await response.json()
     console.log(data)
 
@@ -79,6 +92,7 @@ async function aea() {
         const name = xd.name
         const image = xd.image
         const ki = xd.ki
+        const maxKi = xd.maxKi
         const race = xd.race
         const affiliation = xd.affiliation
 
@@ -93,6 +107,7 @@ async function aea() {
               <img src="${image}" alt="${name}">
               <br/>
               <span>KI -> ${ki}</span>
+              <span>MAX-KI -> ${maxKi}</span>
               <span>RAZA -> ${race}</span>
               <br/>
               <b>${affiliation}</b>
@@ -107,8 +122,6 @@ async function aea() {
     totalpage = data.meta.total_page
     currentPage++;
   }
-
-  console.log("ga")
 }
 
 var res = document.getElementById('res')
