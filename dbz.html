@@ -24,10 +24,14 @@ h1 {
   width: 300px;
   border: 1px solid black;
   padding: 10px;
+  background-image: url(https://web.dragonball-api.com/images-compress/89980.webp);
+  background-position: center center;
+  background-size: cover;
 }
 .cont {
   display: flex;
   flex-direction: column;
+
 }
 img {
   top: -20px;
@@ -36,6 +40,7 @@ img {
   min-height: 400px;
   max-height: 400px;
   margin: 0px;
+  filter: drop-shadow(0px 0px 20px red);
 }
 .aea {
   display: flex;
@@ -95,10 +100,6 @@ async function aea() {
         const maxKi = xd.maxKi
         const race = xd.race
         const affiliation = xd.affiliation
-
-        if (input == name) {
-          console.log("El nombre buscado es: " + name)
-        }
 
         res.innerHTML += `
           <div class="box">
