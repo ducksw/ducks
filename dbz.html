@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dbz</title>
+</head>
+<body>
+<h1>PERSONAJES DE DRAGON BALL SUPER</h1>
+  
+<div id="res"></div>
+<script>
+async function aea() {
+  let res = document.getElementById('res')
+  const URL = "https://dragonball-api.com/api/characters"
+  let arr = []
+  let currentPage = 1
+  let totalpage = 1
+
+  while (currentPage <= totalpage) {
+    const response = await fetch(`${URL}?page=${currentPage}&limit=78`)
+    const data = await response.json()
+    console.log(data)
+
+    const dbz = data.items
+
+    if (Array.isArray(dbz)) {
+      dbz.forEach(xd => {
+        const name = xd.name
+        const image = xd.image
+        const ki = xd.ki
+
+        res.innerHTML += `
+          <div>
+            <h3>${name}</h3>
+            <img src="${image}" alt="${name}" style="width: 100px; height: 100px;">
+            <br/>
+            <span>KI -> ${ki}</span>
+          </div>
+        `;
+      })
+    } else {
+      console.log("aea mano no funciona")
+    }
+
+    totalpage = data.meta.total_page
+    currentPage++;
+  }
+
+}
+
+aea()
+
+/*
+async function view() {
+  let ver = await aea()
+  console.log(ver)
+}
+
+view()
+*/
+</script>
+</body>
+</html>
