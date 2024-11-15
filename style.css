@@ -41,3 +41,8 @@ img {
   max-width: 100%;
   width: 230px;
 }
+
+.name {
+  font-size: 25px;
+  font-weight: bold;
+}
