@@ -77,28 +77,28 @@ Datos extraídos de <a href="https://web.dragonball-api.com/">https://web.dragon
 <div id="res"></div>
 <script>
 async function aea() {
-  const URL = "https://dragonball-api.com/api/characters"
-  const LIMIT = 58 // el maximo 58
+  const URL = "https://dragonball-api.com/api/characters";
+  const LIMIT = 58; // el maximo 58
 
-  let res = document.getElementById('res')
-  let currentPage = 1
-  let totalpage = 1
+  let res = document.getElementById('res');
+  let currentPage = 1;
+  let totalpage = 1;
 
   while (currentPage <= totalpage) {
-    const response = await fetch(`${URL}?page=${currentPage}&limit=${LIMIT}`)
-    const data = await response.json()
-    console.log(data)
+    const response = await fetch(`${URL}?page=${currentPage}&limit=${LIMIT}`);
+    const data = await response.json();
+    console.log(data);
 
-    const dbz = data.items
+    const dbz = data.items;
 
     if (Array.isArray(dbz)) {
       dbz.forEach(xd => {
-        const name = xd.name
-        const image = xd.image
-        const ki = xd.ki
-        const maxKi = xd.maxKi
-        const race = xd.race
-        const affiliation = xd.affiliation
+        const name = xd.name;
+        const image = xd.image;
+        const ki = xd.ki;
+        const maxKi = xd.maxKi;
+        const race = xd.race;
+        const affiliation = xd.affiliation;
 
         res.innerHTML += `
           <div class="box">
@@ -114,17 +114,17 @@ async function aea() {
             </div>
           </div>
         `;
-      })
+      });
     } else {
-      console.log("aea mano no funciona")
+      console.log("aea mano no funciona");
     }
 
-    totalpage = data.meta.total_page
+    totalpage = data.meta.total_page;
     currentPage++;
   }
 }
 
-var res = document.getElementById('res')
+var res = document.getElementById('res');
 
 aea()
 </script>
