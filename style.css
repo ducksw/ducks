@@ -30,12 +30,13 @@ a:hover {
 }
 
 .ig {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 img {
   max-width: 100%;
-  width: 230px;
+  width: 250px;
+  height: 300px;
 }
 
 .name {
