@@ -43,3 +43,8 @@ img {
   font-size: 25px;
   font-weight: bold;
 }
+
+iframe {
+  max-width: 100%;
+  width: 300px;
+}
