@@ -8,8 +8,6 @@ h1 {
 
 pre {
   white-space: pre-wrap;
-  font-family: 'Cascadia Mono', monospace;
-  font-size: 13px;
 }
 
 a {
@@ -48,5 +46,5 @@ img {
 
 iframe {
   max-width: 100%;
-  width: 300px;
+  width: 250px;
 }
