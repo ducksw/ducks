@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+body {
+  font-family: monospace;
+}
+
 h1 {
   margin: 0;
 }
@@ -47,6 +51,14 @@ iframe {
   width: 300px;
 }
 
-#info {
-  font-family: 'Source Code Pro', monospace;
+.title-svg {
+  width: 100%;
+  max-width: 200px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+svg {
+  width: 100%;
+  height: auto;
 }
