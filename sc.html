@@ -3,9 +3,9 @@
 <style>
 pre {
   white-space: pre-wrap;
-  /* max-width: 100%;
+  max-width: 100%;
   width: 900px;
-  margin: auto; */
+  /* margin: auto; */
 }
 a { color: blue; }
 .code { background-color: #171717; color: white; }
@@ -14,10 +14,18 @@ a { color: blue; }
 <pre>
 <big><big><b>******* COSAS QUE TAL VEZ ME PUEDA SERVIR PARA ALGO PERO A LA VEZ NO (🗿) *******</b></big></big>
 
-⣾⡟⠀⢰⡿⠁⢠⣿⡏⠁⣰⣾⠟⠉⠉⠉⠛⣿⣶⠈⢻⣷⡀⠈⣿⣧⠈⣿⣧⠀
-⣿⡇⠀⣿⡇⠀⣿⣿⠀⢸⣿⡇⢰⣿ <img src="source/alien.gif"> ⢸⣿⠀⢸⣿⡇⠀⣿⣿⠀⣿⣿⠀
-⣿⡇⠀⢿⡇⠀⢻⣿⡀⠘⣿⣇⠘⠻⢷⣶⣶⠿⠛⣠⣾⡟⠀⣠⣿⡏⢠⣿⡏
+<b>== ?????? ==</b>
 
+<span id="res">Vamos, mueve el Mouse</span>
+
+<b>[Code]</b> :
+
+document.addEventListener("mousemove", function (e) {
+  let res = document.getElementById('res')
+  res.innerHTML = `MouseX -> ${e.screenX} | MouseY -> ${e.screenY}`
+});
+
+<hr/>
 <b>== Installation and configuration of Neovim ==</b>
 
 Volveré cuando tenga que instalar Neovim nuevamente.
@@ -48,6 +56,10 @@ highlight Comment ctermfg=green
 
 <b>[More info]</b>: <a href="https://github.com/ducksw/configuracion">https://github.com/ducksw/configuracion</a>
 
+⣾⡟⠀⢰⡿⠁⢠⣿⡏⠁⣰⣾⠟⠉⠉⠉⠛⣿⣶⠈⢻⣷⡀⠈⣿⣧⠈⣿⣧⠀
+⣿⡇⠀⣿⡇⠀⣿⣿⠀⢸⣿⡇⢰⣿ <img src="source/alien.gif"> ⢸⣿⠀⢸⣿⡇⠀⣿⣿⠀⣿⣿⠀
+⣿⡇⠀⢿⡇⠀⢻⣿⡀⠘⣿⣇⠘⠻⢷⣶⣶⠿⠛⣠⣾⡟⠀⣠⣿⡏⢠⣿⡏
+
 <hr/>
 <b id="#links">== List links ==</b>
 
@@ -68,3 +80,11 @@ highlight Comment ctermfg=green
 
 ~ducks
 </pre>
+<script>
+document.addEventListener("mousemove", function (e) {
+  let res = document.getElementById('res')
+
+  res.innerHTML = `MouseX -> ${e.screenX} | MouseY -> ${e.screenY}`
+});
+
+</script>
