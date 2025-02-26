@@ -15,17 +15,21 @@ a { text-decoration: none; }
 h1 { font-size: 75px; margin: 0; margin-bottom: 30px; }
 .image-container { position: relative; display: inline-block; }
 .image-container img { display: block; width: 300px; height: 300px; border: 5px solid brown; }
-.date-overlay { position: absolute; bottom: 0; left: 0; top: 1; right: 0; margin: auto; background: rgb(0, 0, 0); color: white; text-align: center; padding: 5px; font-size: 20px; width: 80%; opacity: 0; transition: opacity 0.3s ease-in-out; }
+.date-overlay { position: absolute; bottom: 0; left: 0; top: 1; right: 0; margin: auto; background: black; color: white; text-align: center; padding: 5px; font-size: 20px; width: 80%; opacity: 0; transition: opacity 0.3s ease-in-out; }
 .image-container:hover .date-overlay { opacity: 1; }
 #has { position: absolute; background-color: #333333; color: white; font-size: 20px; }
-.link { font-size: 20px; color: white; color: brown; }
+.nav { display: flex; gap: 20px; justify-content: center; }
+.link { font-size: 20px; color: white; color: white; background-color: brown; box-shadow: 8px 9px 0 0 #333; padding: 2px; }
+.link:hover { background-color: #007667; box-shadow: 8px 9px 0 0 #00bda5; color: black; }
 </style>
 </head>
 <body>
 <center>
 <h1>GAME MOMENT</h1>
+<div class="nav">
 <a href="main.html" class="link">[ BACK ]</a>
 <a href="https://ducksw.github.io/ducks/" class="link">[ HOME ]</a>
+</div>
 <br/><br/><br/>
 </center>
 <div class="gallery">
@@ -90,7 +94,7 @@ h1 { font-size: 75px; margin: 0; margin-bottom: 30px; }
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣤⣤⣀⣀⣀⣀⣀⣀⣀⣤⣤⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀
 </pre>
 
-<b>~ducks<b/>
+<span>~ducks</span>
 </center>
 
 </body>
