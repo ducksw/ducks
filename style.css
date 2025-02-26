@@ -17,12 +17,12 @@ pre {
 }
 
 a {
-  color: blue;
+  color: rgb(247, 78, 78);
+  background-image: radial-gradient(circle, #472525, #371d1f, #261619, #180e10, #000000);
 }
 
 a:hover {
-  background-color: brown;
-  color: black;
+  color: brown;
 }
 
 .link {
