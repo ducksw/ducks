@@ -20,10 +20,12 @@ a {
   color: blue;
 }
 
+/*
 a:hover {
   background-color: brown;
   color: black;
 }
+*/
 
 .link {
   display: flex;
