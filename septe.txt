@@ -1,0 +1,19 @@
+Social:
+    * Mayor demanda para productos gaming de alto rendimiento y para servidores.
+    * Disponibilidad de técnicos especializados en mantenimientos de hardware.
+    * Compras online y envíos rápidos. 
+Económico:
+    * Costos de almacenamiento y distribución de los productos.
+    * Costos adicionales de importacíon.
+
+Político:
+    * Impuestos sobre los productos.
+    * Regulación sobre importacíon y exportación.
+
+Tecnológico:
+    * Tendencia de productos de hardware como inteligencia artificial.
+    * Implementación de inventario automatizados.
+
+Ecológico:
+    * Embalajes y distribución de los productos.
+    * Crecimiento hacia los productos con eficiencia y menor consumo de recursos.
