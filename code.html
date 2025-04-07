@@ -1,2 +1,10 @@
 <pre>
+## Instalar dotnet
+dotnet tool install --global dotnet-ef --version 7.0.20
+
+## Scaffold separando DBContext
+dotnet ef dbcontext scaffold "" Microsoft.EntityFrameworkCore.SqlServer --context AppDbContext --context-dir Data --output-dir Models --force
+
+## Scaffold simplificado
+dotnet ef dbcontext scaffold "" Microsoft.EntityFrameworkCore.SqlServer -o Models -f
 </pre>
