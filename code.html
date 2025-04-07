@@ -1,10 +1,34 @@
-<pre>
-## Instalar dotnet
+<pre style="white-space: pre-wrap;">
+<big><big><b>****** APLICACIONES WEB ******</b></big></big>
+
+<b>== Instalar dotnet ==</b>
+
 dotnet tool install --global dotnet-ef --version 7.0.20
 
 ## Scaffold separando DBContext
+
 dotnet ef dbcontext scaffold "" Microsoft.EntityFrameworkCore.SqlServer --context AppDbContext --context-dir Data --output-dir Models --force
 
-## Scaffold simplificado
+<b>== Scaffold simplificado ==</b>
+
 dotnet ef dbcontext scaffold "" Microsoft.EntityFrameworkCore.SqlServer -o Models -f
+
+<big><big><b>****** Servicios Web ******</b></big></big>
+
+[String contection] -> "Server=SUITEBE308-ST10;Database=bdventas;User Id=sa;Password=sql;MultipleActiveResultSets=true;TrustServerCertificate=True"
+
+<b>== Project and Dependencias ==</b>
+
+Project ==> Maven
+Lenguaje ==> Java
+Spring Boot ==> 3.4.4
+Packaging ==> Jar
+Java ==> 21
+
+* Spring Web
+* Spring Boot Dev Tools
+* Thymeleaf
+* MySQL Driver
+* Spring Data JPA
+
 </pre>
