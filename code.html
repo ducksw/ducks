@@ -15,7 +15,14 @@ dotnet ef dbcontext scaffold "" Microsoft.EntityFrameworkCore.SqlServer -o Model
 
 <b>== Cadena de conexión ==</b>
 
-[String contection] -> "Server=SUITEBE308-ST10;Database=bdventas;User Id=sa;Password=sql;MultipleActiveResultSets=true;TrustServerCertificate=True"
+"ConnectionStrings": {
+  "DefaultConnection": "Server=SUITEBE308-ST10;Database=bdventas;User Id=sa;Password=sql;MultipleActiveResultSets=true;TrustServerCertificate=True"
+},
+
+app.MapControllerRoute(name: "default", pattern: "{controller=Product}/{action=Index}/{id?}");
+
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext < AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 <b>== Dependencias ==</b>
 
