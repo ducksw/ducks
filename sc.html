@@ -44,6 +44,32 @@ highlight Comment ctermfg=green
 
 <b>[More info]</b>: <a href="https://github.com/ducksw/configuracion">https://github.com/ducksw/configuracion</a>
 
+" Define el highlight para espacios extra
+highlight ExtraWhitespace ctermbg=red guibg=#CE0101
+
+augroup TrailingWhitespace
+  autocmd!
+  " Al mover el cursor en Insert, actualiza el match solo en la línea actual
+  autocmd CursorMovedI * call MatchTrailingWhitespaceOnCurrentLine()
+  " Cuando entras en Insert mode, activa el match
+  autocmd InsertEnter * call MatchTrailingWhitespaceOnCurrentLine()
+  " Cuando sales del Insert mode, borra el match
+  autocmd InsertLeave * call clearmatches()
+augroup END
+
+" Función para buscar espacios en blanco solo en la línea actual
+function! MatchTrailingWhitespaceOnCurrentLine()
+  let lnum = line('.')
+  call clearmatches()
+  call matchadd('ExtraWhitespace', '\%'.lnum.'l\s\+$')
+endfunction
+
+augroup ShowInvisibleChars
+  autocmd!
+  autocmd InsertEnter * set list
+  autocmd InsertLeave * set nolist
+augroup END
+
 <hr/>
 <b id="#links">== List links ==</b>
 
