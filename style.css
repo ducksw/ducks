@@ -35,7 +35,7 @@ pre {
   font-size: 35px;
 }
 
-img {
+.image {
   max-width: 100%;
   width: 300px;
   height: 300px;
@@ -43,6 +43,11 @@ img {
   border: 3px solid brown;
   padding: 5px;
   background-color: black;
+}
+
+.title-image {
+  max-width: 100%;
+  width: 200px;
 }
 
 #gif {
