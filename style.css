@@ -1,5 +1,11 @@
+@font-face {
+  font-family: "Hack";
+  src: url("source/HackNerdFontMono-Regular.ttf");
+}
+
 body {
-  font-family: monospace;
+  font-family: "Hack";
+  font-size: 13px;
 }
 
 h1 {
