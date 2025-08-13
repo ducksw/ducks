@@ -9,7 +9,6 @@ local function match_trailing_whitespace_current_line()
   --vim.fn.matchadd("ExtraWhitespace", [[\%]] .. lnum .. [[l\s\+$]])
 end
 
-
 vim.api.nvim_create_augroup("TrailingWhitespace", { clear = true })
 
 vim.api.nvim_create_autocmd({ "CursorMovedI", "InsertEnter" }, {
