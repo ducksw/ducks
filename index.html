@@ -12,9 +12,9 @@
   create: 9/5/2024
 -->
 
-
+<body id="body">
 <main>
-<img class="title-image" src="source/title.svg">
+<img class="title-image" src="source/title.svg" id="image">
 <br/><br/>
 
 un simple mortal tratando de darle ordenes a una computadora<br/><br/>
@@ -39,7 +39,53 @@ no compres dignidad, mejor invierte en memes premium...
 
 &lt;aea&gt;gracias a mi don de diseñador, por este diseño🥵.&lt;/aea&gt;
 
+<br/><br/>
+<span id="btn"></span>
 
 </main>
+<script>
+function color() {
+    let activiy = false;
+
+    btn.onclick = () => {
+        console.log("osi");
+        activiy = !activiy;
+
+        if (activiy) {
+            body.style.backgroundColor = "#111111";
+            body.style.color = "white";
+            image.src = "source/titleWhite.svg";
+            btn.style.backgroundImage = "url('https://i.pinimg.com/736x/ff/8e/d3/ff8ed36732187366817f888356f32735.jpg')";
+
+            localStorage.setItem("theme", JSON.stringify({
+                bg: "#111111",
+                color: "white",
+                img: "source/titleWhite.svg",
+                btn: "https://i.pinimg.com/736x/ff/8e/d3/ff8ed36732187366817f888356f32735.jpg"
+            }));
+        } else {
+            body.style.backgroundColor = "white";
+            body.style.color = "black";
+            image.src = "source/title.svg";
+            btn.style.backgroundImage = "";
+
+            localStorage.removeItem("theme");
+        }
+    };
+
+    const saved = localStorage.getItem("theme");
+    if (saved) {
+        const { bg, color, img, btn: btnUrl } = JSON.parse(saved);
+        body.style.backgroundColor = bg;
+        body.style.color = color;
+        image.src = img;
+        btn.style.backgroundImage = `url('${btnUrl}')`;
+        activiy = true;
+    }
+}
+
+color();
+
+</script>
 </body>
 </html>

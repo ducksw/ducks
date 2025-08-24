@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
 @font-face {
   font-family: "Hack";
   src: url("source/HackNerdFontMono-Regular.ttf");
 }
 
 body {
-  font-family: monospace;
+  font-family: "Hack", monospace;
+  font-size: 13px;
 }
 
 h1 {
@@ -80,4 +83,22 @@ iframe {
 svg {
   width: 100%;
   height: auto;
+}
+
+#btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url("https://i.pinimg.com/736x/6a/d7/9b/6ad79b912b52af3ca4da69fd313d24c5.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 20px;
+  height: 25px;
 }
