@@ -29,11 +29,11 @@ pre {
   white-space: pre-wrap;
 }
 
-.link {
+/* .link {
   display: flex;
   justify-content: center;
   gap: 50px;
-}
+} */
 
 .title {
   font-size: 10px;
